@@ -16,4 +16,10 @@ async function claim() {
       }
     });
     console.log('✅ Klaim berhasil:', res.data);
-  } c
+  } catch (e) {
+    console.error('❌ Gagal:', e.message);
+  }
+}
+
+setInterval(claim, 10000); // tiap 10 detik
+claim();
